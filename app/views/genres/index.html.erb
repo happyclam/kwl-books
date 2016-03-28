@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<div class="container" id="chkDisplay" style="border: 1px; border-style: solid; border-color: #f0f0f0;">
+  <strong>表示方法</strong><br />
+  画像のみ <%= radio_button_tag 'dispflag', 'image', true %>｜
+  テキストのみ<%= radio_button_tag 'dispflag', 'text' %>｜
+  画像＋テキスト<%= radio_button_tag 'dispflag', 'imgtext' %>  
+</div>
+<div class="container" id="board">
+  <ul class="list-unstyled">
+    <% @genres.each do |genre| %>
+    <li><%= link_to(genre.name, genre, class: "btn btn-info", id: "parent" + genre.strId, remote: true) %>
+      <%= button_tag("閉じる", class: "cancel", value: genre.strId, id: "btn" + genre.strId, type: :button, style: "display: none;") %>
+      <ul class="list-inline" id="<%=genre.strId %>"></ul>
+    </li>
+    <% end %>
+  </ul>
+<p>※予約販売は検索対象外</p>
+</div>
+

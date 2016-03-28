@@ -1,0 +1,4 @@
+<li>
+  <%= image_tag(booksimgtext.mediumImageUrl, alt: booksimgtext.title + "画像", title: booksimgtext.salesDate.to_s + "\n" + booksimgtext.title + "\n" + number_to_currency(booksimgtext.itemPrice, precision: 0, delimiter: ",") + "\n" + "レビュー数:" + booksimgtext.reviewCount.to_s) %><br clear="left">
+  <%= link_to booksimgtext.title, booksimgtext.itemUrl, target: "_blank"  %>  
+</li>
