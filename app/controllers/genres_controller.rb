@@ -14,7 +14,7 @@ class GenresController < ApplicationController
     @genre = Genre.find(params[:id])
     @genre.delete_old
     @genre.get_books_summary    
-    @books = @genre.books.order(salesDate: :desc).paginate(page: params[:page])
+    @books = @genre.books.order(salesDate: :desc, publisherName: :asc, author: :asc).paginate(page: params[:page])
 #    render json: @books.to_json
     render
   end
