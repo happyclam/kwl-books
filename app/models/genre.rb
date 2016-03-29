@@ -4,9 +4,7 @@ class Genre < ActiveRecord::Base
 
   def delete_old
     self.books.each{|item|
-#p "日数:"
-#p (Date.today - item.salesDate)
-      item.delete if (Date.today - item.salesDate) > 30
+      item.delete if (Date.today - item.salesDate) > ELAPSED_DAYS
     }
   end
 
@@ -28,7 +26,6 @@ class Genre < ActiveRecord::Base
     params = {:format => 'json', :koboGenreId => self.strId, :sort => '-releaseDate', :salesType => 0, :applicationId => KOBOAPI_APPLICATION_ID}
     results = Genre.exec_api(url, params)
     results["Items"].each_with_index{|item, i|
-#p item["Item"]["itemNumber"] + ":" + i.to_s
       self.books.create(
         :title => item["Item"]["title"],
         :titleKana => item["Item"]["titleKana"],

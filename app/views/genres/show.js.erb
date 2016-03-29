@@ -7,4 +7,4 @@ if ($('input[name=dispflag]:checked').val()==="image") {
 }
 $("#btn<%= @genre.strId %>").show();
 $("#<%= @genre.strId %>").show();
-$("#parent<%= @genre.strId %>").text("<%= @genre.name + '（' + @genre.books.count.to_s + '）' %>");
+$("#parent<%= @genre.strId %>").text("<%= @genre.name + '（' + @genre.books.maximum('salesDate').to_s + '）' %>");
