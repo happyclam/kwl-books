@@ -1,0 +1,4 @@
+vendor/* linguist-vendored
+lib/* linguist-vendored
+bin/* linguist-vendored
+tmp/* linguist-vendored
