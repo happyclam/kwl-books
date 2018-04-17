@@ -4,6 +4,7 @@ class GenresController < ApplicationController
   # GET /genres
   # GET /genres.json
   def index
+p "Genres.index"
     Genre.get_summary
     @genres = Genre.all
   end
@@ -11,10 +12,11 @@ class GenresController < ApplicationController
   # GET /genres/1
   # GET /genres/1.json
   def show
+p "Genres.show"
     @genre = Genre.find(params[:id])
     @genre.delete_old
     @genre.get_books_summary
-    @books = @genre.books.order(salesDate: :desc, publisherName: :asc, author: :asc).limit(RECORD_LIMIT)    
+    @books = @genre.books.order(salesDate: :desc, publisherName: :asc, author: :asc).limit(RECORD_LIMIT)
 #    @books = @genre.books.order(salesDate: :desc, publisherName: :asc, author: :asc).paginate(page: params[:page])
 #    render json: @books.to_json
     render

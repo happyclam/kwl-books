@@ -11,7 +11,11 @@ class Genre < ActiveRecord::Base
   def self.get_summary
     url = RAKUTEN_GENRE_URI + '20131010'
     params = {:format => 'json', :koboGenreId => 101, :applicationId => KOBOAPI_APPLICATION_ID}
-    results = exec_api(url, params)
+    unless params[:applicationId]
+      return
+    else
+      results = exec_api(url, params)
+    end
     results["children"].each_with_index{|item, i|
       Genre.create(
         :strId => item["child"]["koboGenreId"],
@@ -24,7 +28,11 @@ class Genre < ActiveRecord::Base
   def get_books_summary
     url = RAKUTEN_KWL_URI + '20140811'
     params = {:format => 'json', :koboGenreId => self.strId, :sort => '-releaseDate', :salesType => 0, :applicationId => KOBOAPI_APPLICATION_ID}
-    results = Genre.exec_api(url, params)
+    unless params[:applicationId]
+      return
+    else
+      results = Genre.exec_api(url, params)
+    end
     results["Items"].each_with_index{|item, i|
       self.books.create(
         :title => item["Item"]["title"],
