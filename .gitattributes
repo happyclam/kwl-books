@@ -2,3 +2,5 @@ vendor/* linguist-vendored
 lib/* linguist-vendored
 bin/* linguist-vendored
 tmp/* linguist-vendored
+app/assets/* linguist-vendored
+public/assets/* linguist-vendored
