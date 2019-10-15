@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'static_pages/policy'
+
   root 'genres#index'
   resources :genres, :only => ["index", "show"] do
     resources :books, :only => ["show"]
   end
+  get '*not_found' => 'application#routing_error'
+  post '*not_found' => 'application#routing_error'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
