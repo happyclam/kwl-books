@@ -5,7 +5,7 @@ ruby "2.5.3"
 gem 'twitter-bootstrap3-rails'
 gem 'bootstrap-sass'
 gem 'will_paginate'
-gem 'google-analytics-rails'
+# gem 'google-analytics-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~>4.2.11.1'
