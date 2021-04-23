@@ -2,10 +2,11 @@ source 'https://rubygems.org'
 ruby "2.5.3"
 
 #gem 'config'
-gem 'twitter-bootstrap3-rails'
+gem 'twitter-bootstrap3-rails', '>=3.1'
 gem 'bootstrap-sass'
 gem 'will_paginate'
 # gem 'google-analytics-rails'
+gem 'rack', '>=1.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~>4.2.11.1'
