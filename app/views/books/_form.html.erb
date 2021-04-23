@@ -1,0 +1,105 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :titleKana %><br>
+    <%= f.text_field :titleKana %>
+  </div>
+  <div class="field">
+    <%= f.label :subTitle %><br>
+    <%= f.text_field :subTitle %>
+  </div>
+  <div class="field">
+    <%= f.label :seriesName %><br>
+    <%= f.text_field :seriesName %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :authorKana %><br>
+    <%= f.text_field :authorKana %>
+  </div>
+  <div class="field">
+    <%= f.label :publisherName %><br>
+    <%= f.text_field :publisherName %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :salesDate %><br>
+    <%= f.date_select :salesDate %>
+  </div>
+  <div class="field">
+    <%= f.label :itemNumber %><br>
+    <%= f.text_field :itemNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :koboGenreId %><br>
+    <%= f.text_field :koboGenreId %>
+  </div>
+  <div class="field">
+    <%= f.label :itemCaption %><br>
+    <%= f.text_field :itemCaption %>
+  </div>
+  <div class="field">
+    <%= f.label :itemPrice %><br>
+    <%= f.number_field :itemPrice %>
+  </div>
+  <div class="field">
+    <%= f.label :itemUrl %><br>
+    <%= f.text_field :itemUrl %>
+  </div>
+  <div class="field">
+    <%= f.label :affiliateUrl %><br>
+    <%= f.text_field :affiliateUrl %>
+  </div>
+  <div class="field">
+    <%= f.label :smallImageUrl %><br>
+    <%= f.text_field :smallImageUrl %>
+  </div>
+  <div class="field">
+    <%= f.label :mediumImageUrl %><br>
+    <%= f.text_field :mediumImageUrl %>
+  </div>
+  <div class="field">
+    <%= f.label :largeImageUrl %><br>
+    <%= f.text_field :largeImageUrl %>
+  </div>
+  <div class="field">
+    <%= f.label :reviewCount %><br>
+    <%= f.text_field :reviewCount %>
+  </div>
+  <div class="field">
+    <%= f.label :integer %><br>
+    <%= f.text_field :integer %>
+  </div>
+  <div class="field">
+    <%= f.label :reviewAverage %><br>
+    <%= f.text_field :reviewAverage %>
+  </div>
+  <div class="field">
+    <%= f.label :salesType %><br>
+    <%= f.number_field :salesType %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

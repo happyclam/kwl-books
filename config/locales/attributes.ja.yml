@@ -1,0 +1,31 @@
+ja:
+  activerecord:
+    attributes:
+      book:
+        duration: 日数
+        title: 書籍タイトル
+        titleKana: 書籍タイトル カナ
+        subTitle: 書籍サブタイトル
+        seriesName: 叢書名
+        author: 著者名
+        authorKana: 著者名カナ
+        publisherName: 出版社名
+        language: 言語
+        salesDate: 発売日
+        itemNumber: 商品番号
+        koboGenreId: 楽天KoboジャンルID
+        itemCaption: 商品説明文
+        itemPrice: 税込み販売価格
+        itemUrl: 商品URL
+        affiliateUrl: アフィリエイトURL
+        smallImageUrl: 商品画像 64x64URL
+        mediumImageUrl: 商品画像 128x128URL
+        largeImageUrl: 商品画像 200x200URL
+        reviewCount: レビュー件数
+        reviewAverage: レビュー平均
+        salesType: 販売タイプ
+      genre:
+        strId: ジャンルID
+        name: ジャンル名
+        level: ジャンルレベル
+        

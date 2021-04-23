@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to(@genre.name, genres_path, class: "btn btn-info") %>
+<div class="contaner">
+  <% if @genre.books.any? %>
+    <ul class="list-inline">
+      <%= render @books %>
+    </ul>
+    <%= will_paginate @books, previous_label: "前ページ", next_label: "次ページ" %>
+  <% end %>
+</div>
+<p>※予約販売は検索対象外</p>

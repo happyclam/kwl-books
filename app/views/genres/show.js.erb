@@ -1,0 +1,10 @@
+if ($('input[name=dispflag]:checked').val()==="image") {
+  $("#<%= @genre.strId %>").html("<%= j(render(partial: 'books/booksimage', collection: @books)) %>");
+} else if ($('input[name=dispflag]:checked').val()==="text") {
+  $("#<%= @genre.strId %>").html("<%= j(render(partial: 'books/bookstext', collection: @books)) %>");
+} else {
+  $("#<%= @genre.strId %>").html("<%= j(render(partial: 'books/booksimgtext', collection: @books)) %>");
+}
+$("#btn<%= @genre.strId %>").show();
+$("#<%= @genre.strId %>").show();
+$("#parent<%= @genre.strId %>").text("<%= @genre.name + '（' + @genre.books.maximum('salesDate').to_s + '）' %>");

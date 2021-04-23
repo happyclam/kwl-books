@@ -1,0 +1,3 @@
+<li>
+  <%= link_to bookstext.salesDate.to_s + ":" + bookstext.publisherName + ":" + bookstext.author + ":" + number_to_currency(bookstext.itemPrice, precision: 0, delimiter: ",") + ":" + bookstext.title, bookstext.itemUrl, target: "_blank"  %>
+</li><br />

@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  titleKana: MyString
+  subTitle: MyString
+  seriesName: MyString
+  author: MyString
+  authorKana: MyString
+  publisherName: MyString
+  language: MyString
+  salesDate: 2016-03-25
+  itemNumber: MyString
+  koboGenreId: MyString
+  itemCaption: MyString
+  itemPrice: 1
+  itemUrl: MyString
+  affiliateUrl: MyString
+  smallImageUrl: MyString
+  mediumImageUrl: MyString
+  largeImageUrl: MyString
+  reviewCount: MyString
+  integer: MyString
+  reviewAverage: MyString
+  salesType: 1
+
+two:
+  title: MyString
+  titleKana: MyString
+  subTitle: MyString
+  seriesName: MyString
+  author: MyString
+  authorKana: MyString
+  publisherName: MyString
+  language: MyString
+  salesDate: 2016-03-25
+  itemNumber: MyString
+  koboGenreId: MyString
+  itemCaption: MyString
+  itemPrice: 1
+  itemUrl: MyString
+  affiliateUrl: MyString
+  smallImageUrl: MyString
+  mediumImageUrl: MyString
+  largeImageUrl: MyString
+  reviewCount: MyString
+  integer: MyString
+  reviewAverage: MyString
+  salesType: 1
