@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.5.3"
 
-#gem 'config'
+gem 'config'
 gem 'twitter-bootstrap3-rails', '>=3.1'
 gem 'bootstrap-sass'
 gem 'will_paginate'
