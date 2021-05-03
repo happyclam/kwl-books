@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'static_pages/policy'
-
+  get '/sitemap.xml.gz', to: redirect("/sitemap.xml.gz")
   root 'genres#index'
   resources :genres, :only => ["index", "show"] do
     resources :books, :only => ["show"]
