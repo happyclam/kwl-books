@@ -7,6 +7,8 @@ gem 'bootstrap-sass'
 gem 'will_paginate'
 # gem 'google-analytics-rails'
 gem 'rack', '>=1.6'
+gem 'sitemap_generator'
+gem 'whenever', require: false
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~>4.2.11.1'
