@@ -6,6 +6,7 @@ capybara-*.html
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
+/public/assets
 /coverage/
 /spec/tmp
 **.orig
@@ -37,9 +38,9 @@ bower.json
 config/initializers/secret_token.rb
 # config/secrets.yml
 .secret
-
 config/settings.local.yml
 .#*
 *#
 *.txt
 *~
+public/sitemap.xml.gz
