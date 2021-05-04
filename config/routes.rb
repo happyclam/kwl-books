@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'static_pages/policy'
-  get '/sitemap.xml.gz', to: redirect("https://kwl-books/sitemap.xml.gz", status: 301)
+  get '/sitemap.xml.gz', to: redirect("https://kwl-books.herokuapp.com/sitemap.xml.gz", status: 301)
   root 'genres#index'
   resources :genres, :only => ["index", "show"] do
     resources :books, :only => ["show"]
