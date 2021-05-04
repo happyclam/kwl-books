@@ -17,11 +17,31 @@ SitemapGenerator::Sitemap.create do
   #
   # Add '/articles'
   #
-  add '/sitemap.xml.gz', :priority => 0.7, :changefreq => 'daily'
+  # add '/', :priority => 0.7, :changefreq => 'daily'
   #
   # Add all articles:
   #
-  # Article.find_each do |article|
-  #   add article_path(article), :lastmod => article.updated_at
+  # Genres.find_each do |genre|
+  #   add genre_path(genre), :changefreq => 'always', :lastmod => genre.updated_at
   # end
+  add 'genres/1', :changefreq => 'always'
+  add 'genres/2', :changefreq => 'always'
+  add 'genres/3', :changefreq => 'always'
+  add 'genres/4', :changefreq => 'always'
+  add 'genres/5', :changefreq => 'always'
+  add 'genres/6', :changefreq => 'always'
+  add 'genres/7', :changefreq => 'always'
+  add 'genres/8', :changefreq => 'always'
+  add 'genres/9', :changefreq => 'always'
+  add 'genres/10', :changefreq => 'always'
+  add 'genres/11', :changefreq => 'always'
+  add 'genres/12', :changefreq => 'always'
+  add 'genres/13', :changefreq => 'always'
+  add 'genres/14', :changefreq => 'always'
+  add 'genres/15', :changefreq => 'always'
+  add 'genres/16', :changefreq => 'always'
+  add 'genres/17', :changefreq => 'always'
+  add 'genres/18', :changefreq => 'always'
+  add 'genres/19', :changefreq => 'always'
+
 end
