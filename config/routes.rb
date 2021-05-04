@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :genres, :only => ["index", "show"] do
     resources :books, :only => ["show"]
   end
-  get '/sitemap.xml.gz', to: redirect("https://kwl-books.herokuapp.com/sitemap.xml.gz", status: 301)
   get '*not_found' => 'application#routing_error'
   post '*not_found' => 'application#routing_error'
 
