@@ -17,7 +17,7 @@ SitemapGenerator::Sitemap.create do
   #
   # Add '/articles'
   #
-  add '/', :priority => 0.7, :changefreq => 'daily'
+  add '/sitemap.xml.gz', :priority => 0.7, :changefreq => 'daily'
   #
   # Add all articles:
   #
